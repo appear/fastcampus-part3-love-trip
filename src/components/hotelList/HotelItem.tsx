@@ -3,7 +3,7 @@ import { differenceInMilliseconds, parseISO } from 'date-fns'
 import { css } from '@emotion/react'
 import { Link } from 'react-router-dom'
 
-import { Hotel as IHotel } from '@models/hotel'
+import { Hotel } from '@models/hotel'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
@@ -13,7 +13,7 @@ import Tag from '@shared/Tag'
 import addDelimiter from '@utils/addDelimiter'
 import formatTime from '@utils/formatTime'
 
-function Hotel({ hotel }: { hotel: IHotel }) {
+function HotelItem({ hotel }: { hotel: Hotel }) {
   const [remainedTime, setRemainedTime] = useState(0)
 
   useEffect(() => {
@@ -108,4 +108,4 @@ const imageStyles = css`
   margin-left: 16px;
 `
 
-export default Hotel
+export default HotelItem

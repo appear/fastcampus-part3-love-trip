@@ -5,6 +5,8 @@ import {
   query,
   getDocs,
   startAfter,
+  doc,
+  getDoc,
 } from 'firebase/firestore'
 
 import { COLLECTIONS } from '@constants'
@@ -38,4 +40,13 @@ export async function getHotels(pageParams?: QuerySnapshot<Hotel>) {
     items,
     lastVisible,
   }
+}
+
+export async function getHotel(id: string) {
+  const snapshot = await getDoc(doc(store, COLLECTIONS.HOTEL, id))
+
+  return {
+    id,
+    ...snapshot.data(),
+  } as Hotel
 }
