@@ -9,7 +9,9 @@
             "@pages/*": ["src/pages/*"],
             "@remote/*": ["src/remote/*"],
             "@constants": ["src/constants/index"],
-            "@constants/*": ["src/constants/*"]
+            "@constants/*": ["src/constants/*"],
+            "@models/*": ["src/models/*"],
+            "@utils/*": ["src/utils/*"]
         }
     }
 }
