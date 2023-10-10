@@ -13,7 +13,8 @@
             "@models/*": ["src/models/*"],
             "@utils/*": ["src/utils/*"],
             "@hooks/*": ["src/hooks/*"],
-            "@store/*": ["src/store/*"]
+            "@store/*": ["src/store/*"],
+            "@contexts/*": ["src/contexts/*"]
         }
     }
 }

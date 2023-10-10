@@ -14,8 +14,6 @@ import useRooms from './hooks/useRooms'
 function Rooms({ hotelId }: { hotelId: string }) {
   const { data } = useRooms({ hotelId })
 
-  console.log('data', data)
-
   return (
     <Container>
       <Header justify="space-between" align="center">
