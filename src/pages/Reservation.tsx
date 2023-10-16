@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import useReservation from '@components/reservation/hooks/useReservation'
 import Summary from '@components/reservation/Summary'
 import Spacing from '@shared/Spacing'
+import Form from '@components/reservation/Form'
+import addDelimiter from '@/utils/addDelimiter'
 
 function ReservationPage() {
   const { startDate, endDate, nights, roomId, hotelId } = parse(
@@ -35,6 +37,12 @@ function ReservationPage() {
 
   const { hotel, room } = data
 
+  const handleSubmit = () => {}
+
+  const buttonLabel = `${nights}박 ${addDelimiter(
+    room.price * Number(nights),
+  )}원 예약하기`
+
   return (
     <div>
       <Summary
@@ -45,6 +53,11 @@ function ReservationPage() {
         nights={nights}
       />
       <Spacing size={8} backgroundColor="gray100" />
+      <Form
+        onSubmit={handleSubmit}
+        forms={hotel.forms}
+        buttonLabel={buttonLabel}
+      />
     </div>
   )
 }

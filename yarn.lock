@@ -11643,6 +11643,7 @@ __metadata:
     react-copy-to-clipboard: ^5.1.0
     react-day-picker: ^8.8.2
     react-dom: ^18.2.0
+    react-hook-form: ^7.47.0
     react-infinite-scroll-component: ^6.1.0
     react-markdown: ^9.0.0
     react-query: ^3.39.3
@@ -12998,6 +12999,15 @@ __metadata:
   version: 6.0.11
   resolution: "react-error-overlay@npm:6.0.11"
   checksum: ce7b44c38fadba9cedd7c095cf39192e632daeccf1d0747292ed524f17dcb056d16bc197ddee5723f9dd888f0b9b19c3b486c430319e30504289b9296f2d2c42
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.47.0":
+  version: 7.47.0
+  resolution: "react-hook-form@npm:7.47.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: dec192fec9c54e436f9e47008635dd7849b6b119ed477a9b0cd491367a0b2ced3427cd937febfb245e1cb7578c863917181d903eff4519c2787bf713ec7d3426
   languageName: node
   linkType: hard
 
