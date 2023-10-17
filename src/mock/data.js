@@ -158,3 +158,52 @@ export const ROOMS = [
     imageUrl: 'https://www.japan-guide.com/g9/2007_tsukeshoin.jpg',
   },
 ]
+
+export const FORMS = [
+  {
+    id: 'name',
+    label: '한글명',
+    required: true,
+    type: 'TEXT_FIELD',
+  },
+  {
+    id: 'phone',
+    label: '휴대전화번호',
+    required: true,
+    type: 'TEXT_FIELD',
+  },
+  {
+    id: 'email',
+    label: '이메일',
+    required: true,
+    type: 'TEXT_FIELD',
+  },
+  {
+    id: 'isSmoke',
+    label: '흡연여부',
+    required: false,
+    type: 'SELECT',
+    options: [
+      {
+        label: '상관없음',
+        value: '',
+      },
+      {
+        label: '흡연',
+        value: 'true',
+      },
+      {
+        label: '비흡연',
+        value: 'false',
+      },
+    ],
+  },
+  {
+    id: 'special_request',
+    label: '요청사항',
+    required: false,
+    type: 'TEXT_FIELD',
+    helpMessage:
+      '요청사항은 모두 전달되나 현지 숙소 사정에 따라 반영되지 않을 수 있습니다.',
+  },
+]

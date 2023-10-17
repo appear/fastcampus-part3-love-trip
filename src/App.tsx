@@ -8,6 +8,10 @@ import MyPage from '@pages/My'
 import SigninPage from '@pages/Signin'
 import SettingsPage from '@pages/settings'
 import LikePage from '@pages/settings/like'
+import SchedulePage from '@pages/Schedule'
+import ReservationPage from '@pages/Reservation'
+import ReservationDonePage from '@pages/ReservationDone'
+import ReservationListPage from '@pages/ReservationList'
 
 import AuthGuard from '@components/auth/AuthGuard'
 import Navbar from '@shared/Navbar'
@@ -46,6 +50,38 @@ function App() {
             element={
               <PrivateRoute>
                 <LikePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/schedule"
+            element={
+              <PrivateRoute>
+                <SchedulePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/reservation"
+            element={
+              <PrivateRoute>
+                <ReservationPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/reservation/done"
+            element={
+              <PrivateRoute>
+                <ReservationDonePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/reservation/list"
+            element={
+              <PrivateRoute>
+                <ReservationListPage />
               </PrivateRoute>
             }
           />
