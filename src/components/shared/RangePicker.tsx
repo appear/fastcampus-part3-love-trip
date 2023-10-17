@@ -1,4 +1,10 @@
-import { parseISO, isSameDay, format, differenceInDays } from 'date-fns'
+import {
+  parseISO,
+  isSameDay,
+  format,
+  differenceInDays,
+  addDays,
+} from 'date-fns'
 import { ko } from 'date-fns/locale'
 import { DayPicker, DateRange } from 'react-day-picker'
 import styled from '@emotion/styled'
@@ -46,6 +52,9 @@ function RangePicker({ startDate, endDate, onChange }: RangePickerProps) {
         defaultMonth={today}
         onSelect={handleDayClick}
         selected={selected}
+        disabled={{
+          before: addDays(new Date(), 1),
+        }}
       />
     </Container>
   )
@@ -92,6 +101,10 @@ const Container = styled.div`
     position: relative;
     width: 100%;
     line-height: 45px;
+  }
+
+  .rdp-cell .rdp-button[disabled] {
+    color: ${colors.gray200};
   }
 
   .rdp-day_selected {

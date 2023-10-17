@@ -163,25 +163,25 @@ export const FORMS = [
   {
     id: 'name',
     label: '한글명',
-    required: 'true',
+    required: true,
     type: 'TEXT_FIELD',
   },
   {
     id: 'phone',
     label: '휴대전화번호',
-    required: 'true',
+    required: true,
     type: 'TEXT_FIELD',
   },
   {
     id: 'email',
     label: '이메일',
-    required: 'true',
+    required: true,
     type: 'TEXT_FIELD',
   },
   {
     id: 'isSmoke',
     label: '흡연여부',
-    required: 'false',
+    required: false,
     type: 'SELECT',
     options: [
       {
@@ -199,9 +199,9 @@ export const FORMS = [
     ],
   },
   {
-    id: 'spectial_request',
+    id: 'special_request',
     label: '요청사항',
-    required: 'false',
+    required: false,
     type: 'TEXT_FIELD',
     helpMessage:
       '요청사항은 모두 전달되나 현지 숙소 사정에 따라 반영되지 않을 수 있습니다.',

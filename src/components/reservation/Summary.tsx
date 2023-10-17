@@ -52,7 +52,7 @@ function Summary({
           {Object.keys(room.basicInfo).map((key) => {
             if (key in INFO_LBAEL_MAP) {
               return (
-                <Flex as="li" justify="space-between">
+                <Flex as="li" justify="space-between" key={key}>
                   <Text color="gray600" typography="t6">
                     {INFO_LBAEL_MAP[key as keyof typeof INFO_LBAEL_MAP]}
                   </Text>
