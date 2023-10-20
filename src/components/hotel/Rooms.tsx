@@ -15,6 +15,7 @@ import addDelimiter from '@utils/addDelimiter'
 import useUser from '@hooks/auth/useUser'
 import { useAlertContext } from '@contexts/AlertContext'
 import useRooms from './hooks/useRooms'
+import withSusepnse from '@shared/hocs/withSuspense'
 
 function Rooms({ hotelId }: { hotelId: string }) {
   const { data } = useRooms({ hotelId })
@@ -120,4 +121,4 @@ const imageStyles = css`
   border-radius: 4px;
 `
 
-export default Rooms
+export default withSusepnse(Rooms, { fallback: <div>룸 불러오는중...</div> })
