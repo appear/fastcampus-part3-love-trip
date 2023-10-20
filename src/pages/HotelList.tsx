@@ -7,6 +7,7 @@ import HotelItem from '@/components/hotelList/HotelItem'
 import { Fragment } from 'react'
 import Spacing from '@shared/Spacing'
 import useLike from '@hooks/like/useLike'
+import withSusepnse from '@shared/hocs/withSuspense'
 
 function HotelList() {
   const { data: hotels, hasNextPage, loadMore } = useHotels()
@@ -48,4 +49,6 @@ function HotelList() {
   )
 }
 
-export default HotelList
+export default withSusepnse(HotelList, {
+  fallback: <div>호텔리스트불러오는중 ....</div>,
+})
