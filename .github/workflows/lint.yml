@@ -18,5 +18,5 @@ jobs:
 
       # ESLint and Prettier must be in `package.json`
       - name: Lint
-        run: yarn install
-        run: yarn lint
+      - run: yarn install
+      - run: yarn lint
