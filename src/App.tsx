@@ -19,6 +19,8 @@ const ReservationPage = lazy(() => import('@pages/Reservation'))
 const ReservationDonePage = lazy(() => import('@pages/ReservationDone'))
 const ReservationListPage = lazy(() => import('@pages/ReservationList'))
 
+console.log()
+
 function App() {
   useLoadKakao()
 
